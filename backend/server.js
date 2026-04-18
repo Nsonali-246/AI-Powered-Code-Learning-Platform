@@ -5,6 +5,7 @@ import cors from "cors";
 import testRoutes from "./routes/testRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
+import tutorialRoutes from "./routes/tutorialRoutes.js";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use("/api/test", testRoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/user",userRoutes);
+app.use("/api/tutorials", tutorialRoutes);
 
 connectDB();
 
